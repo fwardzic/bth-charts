@@ -9,7 +9,7 @@ entries:
     name: bth-webapp
     type: application
     urls:
-    - https://fwardzic.github.io/bth-charts/bth-webapp-0.1.1.tgz
+    - https://fwardzic.github.io/bth-demo/bth-webapp-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
@@ -19,6 +19,6 @@ entries:
     name: bth-webapp
     type: application
     urls:
-    - https://fwardzic.github.io/bth-charts/bth-webapp-0.1.0.tgz
+    - https://fwardzic.github.io/bth-demo/bth-webapp-0.1.0.tgz
     version: 0.1.0
 generated: "2023-05-09T11:58:55.956674+02:00"
