@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  bth-webapp:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-05-09T11:22:35.216102+02:00"
+    description: BTH Cloud-Native tools demo
+    digest: 530a1332e7f8ac6c3d9961527627857fbf7e47f4045ae3fb50c28c5c9969b779
+    name: bth-webapp
+    type: application
+    urls:
+    - https://fwardzic.github.io/bth-charts/bth-webapp-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-09T11:22:35.215383+02:00"
