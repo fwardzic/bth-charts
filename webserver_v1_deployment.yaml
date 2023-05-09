@@ -26,7 +26,7 @@ spec:
         - env:
             - name: SERVERCONTNET
               value: WebServer V1
-          image: index.docker.io/mcasperson/simpleserver:0.1.12
+          image: index.docker.io/fwardzic/simpleserver:v1.0.0
           imagePullPolicy: IfNotPresent
           name: simpleserver
           ports:
