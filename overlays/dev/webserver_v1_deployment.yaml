@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+  name: webserver
+spec: 
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - env:
+            - name: SERVERCONTNET
+              value: DEV - WebServer V1
