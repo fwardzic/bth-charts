@@ -1,16 +1,18 @@
 apiVersion: networking.istio.io/v1alpha3
-kind: DestinationRule
+kind: VirtualService
 metadata:
   name: webserver
+  namespace: demo-3
 spec:
-  host: webserver
+  hosts:
+    - webserver
   http:
   - route:
     - destination:
         host: webserver
-        subet: v1
+        subset: v1
       weight: 80
     - destination:
         host: webserver
-        subet: v2
+        subset: v2
       weight: 20
