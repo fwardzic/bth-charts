@@ -1,24 +1,14 @@
 apiVersion: v1
 entries:
-  bth-webapp:
+  bth-demo:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-09T11:58:55.957326+02:00"
-    description: BTH Cloud-Native tools demo
-    digest: ad62a8c47821597737da894c686d9f5fefc60de0b6f2821435f99e92fa13bb4b
-    name: bth-webapp
+    created: "2023-05-11T14:32:02.511561+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c099751b3979a6469df197ec512f2bc1af30e4a9bd643b0ba20c2eaf3d5f0783
+    name: bth-demo
     type: application
     urls:
-    - https://fwardzic.github.io/bth-demo/bth-webapp-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2023-05-09T11:58:55.957076+02:00"
-    description: BTH Cloud-Native tools demo
-    digest: 530a1332e7f8ac6c3d9961527627857fbf7e47f4045ae3fb50c28c5c9969b779
-    name: bth-webapp
-    type: application
-    urls:
-    - https://fwardzic.github.io/bth-demo/bth-webapp-0.1.0.tgz
+    - https://fwardzic.github.io/bth-demo/bth-demo-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-09T11:58:55.956674+02:00"
+generated: "2023-05-11T14:32:02.51114+02:00"
