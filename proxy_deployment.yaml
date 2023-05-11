@@ -17,7 +17,7 @@ spec:
         - env:
             - name: PROXYURL
               value: http://webserver
-          image: index.docker.io/fwardzic/simpleproxy:latest
+          image: index.docker.io/fwardzic/simpleproxy:v1.0.0
           imagePullPolicy: IfNotPresent
           name: proxy
           ports:
