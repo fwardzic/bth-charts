@@ -5,9 +5,9 @@ metadata:
 spec:
   ports:
     - name: web
-      port: 80
+      port: {{ .Values.proxy.servicePort }}
       protocol: TCP
-      targetPort: 3030
+      targetPort: {{ .Values.proxy.containerPort }}
   selector:
     app: proxy
   type: LoadBalancer

@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: {{ .Values.proxy.image.pullPolicy }}
           name: {{ .Release.Name }}-proxy
           ports:
-            - containerPort: 3030
+            - containerPort: {{ .Values.proxy.containerPort }}
               name: web
               protocol: TCP
           resources:

@@ -13,6 +13,10 @@ proxy:
   containerPort: 3030
   servicePort: 80
 
+webserver_common:
+  containerPort: 3030
+  servicePort: 80
+
 webserverv1:
   replicaCount: 3
   repository: index.docker.io/fwardzic/simpleserver

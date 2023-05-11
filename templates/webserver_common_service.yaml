@@ -5,9 +5,9 @@ metadata:
 spec:
   ports:
     - name: http-web
-      port: 80
+      port: {{ .Values.webserver_common.servicePort }}
       protocol: TCP
-      targetPort: 3030
+      targetPort: {{ .Values.webserver_common.containerPort }}
   selector:
     app: webserver
   type: ClusterIP
