@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: webserver
-    version: v1
+    version: v1.0.0
   name: webserverv1
 spec:
   progressDeadlineSeconds: 600
@@ -12,21 +12,21 @@ spec:
   selector:
     matchLabels:
       app: webserver
-      version: v1
+      version: v1.0.0
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: webserver
-        version: v1
+        version: v1.0.0
     spec:
       affinity: {}
       containers:
         - env:
             - name: SERVERCONTNET
               value: WebServer V1
-          image: index.docker.io/mcasperson/simpleserver:0.1.12
+          image: index.docker.io/fwardzic/simpleserver:v1.0.0
           imagePullPolicy: IfNotPresent
           name: simpleserver
           ports:
