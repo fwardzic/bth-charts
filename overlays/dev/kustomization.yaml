@@ -4,3 +4,5 @@ bases:
   - ../../base
 patches:
   - dev_webserver_kustomizations.yaml
+patchesStrategicMerge:
+  - env.yaml

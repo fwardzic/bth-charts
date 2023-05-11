@@ -4,10 +4,3 @@ metadata:
   name: webserver
 spec:
   replicas: 1
-  template:
-    spec:
-      containers:
-        - name: simpleserver
-        - env:
-            - name: SERVERCONTNET
-              value: DEV - WebServer V1
