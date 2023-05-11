@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-proxy
+spec:
+  progressDeadlineSeconds: 600
+  replicas: {{ .Values.proxy.replicaCount }}
+  selector:
+    matchLabels:
+      app: proxy
+  template:
+    metadata:
+      labels:
+        app: proxy
+    spec:
+      containers:
+        - env:
+            - name: PROXYURL
+              value: http://webserver
+          image: "{{ .Values.proxy.image.repository }}:{{ .Values.proxy.image.tag }}"
+          imagePullPolicy: {{ .Values.proxy.image.pullPolicy }}
+          name: {{ .Release.Name }}-proxy
+          ports:
+            - containerPort: 3030
+              name: web
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 25m
+            requests:
+              cpu: 25m

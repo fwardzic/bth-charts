@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webserver
+    version: v2
+  name: {{ .Release.Name }}-webserverv2
+spec:
+  progressDeadlineSeconds: 600
+  replicas: {{ .Values.webserverv2.replicaCount }}
+  selector:
+    matchLabels:
+      app: webserver
+      version: v2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webserver
+        version: v2
+    spec:
+      affinity: {}
+      containers:
+        - env:
+            - name: SERVERCONTNET
+              value: {{ .Values.webserverv2.webContent }}
+          image: {{ .Values.webserverv2.repository }}:{{ .Values.webserverv1.tag }}
+          imagePullPolicy: IfNotPresent
+          name: simpleserver
+          ports:
+            - containerPort: {{ .Values.webserverv2.containerPort }}
+              name: web
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 25m
+            requests:
+              cpu: 25m

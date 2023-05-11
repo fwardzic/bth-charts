@@ -1,0 +1,32 @@
+# Default values for bth-demo.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+proxy:
+  replicaCount: 1
+  image:
+    repository: index.docker.io/fwardzic/simpleproxy
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: "v1.0.0"
+  containerPort: 3030
+  servicePort: 80
+
+webserverv1:
+  replicaCount: 3
+  repository: index.docker.io/fwardzic/simpleserver
+  tag: "v1.0.0"
+  containerPort: 3030
+  servicePort: 80
+  webContent: "WebServer v1"
+
+webserverv2:
+  replicaCount: 3
+  repository: index.docker.io/fwardzic/simpleserver
+  tag: "v1.0.0"
+  containerPort: 3030
+  servicePort: 80
+  webContent: "WebServer v2"
+
+imagePullSecrets: regcred
