@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: webserver
+spec:
+  host: webserver
+  http:
+  - route:
+    - destination:
+        host: webserver
+        subet: v1
+      weight: 80
+    - destination:
+        host: webserver
+        subet: v2
+      weight: 20
