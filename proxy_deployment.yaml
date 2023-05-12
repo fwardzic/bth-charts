@@ -19,8 +19,6 @@ spec:
               value: http://webserver
           image: index.docker.io/fwardzic/simpleproxy:v1.0.0
           imagePullPolicy: IfNotPresent
-          imagePullSecrets:
-            - name: regcred 
           name: proxy
           ports:
             - containerPort: 3030
@@ -31,3 +29,5 @@ spec:
               cpu: 25m
             requests:
               cpu: 25m
+        imagePullSecrets:
+          - name: regcred 
