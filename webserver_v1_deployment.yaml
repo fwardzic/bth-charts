@@ -28,8 +28,6 @@ spec:
               value: Demo-1 WebServer V1
           image: index.docker.io/fwardzic/simpleserver:v1.0.0
           imagePullPolicy: IfNotPresent
-          imagePullSecrets:
-            - name: regcred 
           name: simpleserver
           ports:
             - containerPort: 3030
@@ -40,3 +38,5 @@ spec:
               cpu: 25m
             requests:
               cpu: 25m
+      imagePullSecrets:
+        - name: regcred 
